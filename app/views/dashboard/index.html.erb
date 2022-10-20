@@ -1,0 +1,24 @@
+<h1>Simple DashBoard</h1>
+
+<%= form_with url: "/save_content", method: :get do |form| %>
+  <%= form.label :query, "write several urls to fetch with space:" %>
+  <%= form.text_field :query %>
+  <%= form.label :query, "Show metadata:" %>
+  <%= form.check_box :metadata %>
+  <%= form.submit "Save Content" %>
+<% end %>
+
+<% if flash[:results].present? %>
+    <% flash[:results].each do |result|%>
+        <% if result[:msg].present? %>
+            URL: <%= result[:url] %> <br/>
+            Message: <%= result[:msg] %> <br/>
+        <% end %>
+        <% if result[:last_fetch].present? %>
+            num_links: <%= result[:num_links] %> <br/>
+            images: <%= result[:images] %> <br/>
+            last_fetch: <%= result[:last_fetch] %> <br/>
+        <% end %>
+        <br/><br/>
+    <% end %>
+<% end %>

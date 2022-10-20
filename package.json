@@ -1,0 +1,19 @@
+{
+  "name": "save_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/highshot-rk/save_site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/highshot-rk/save_site/issues"
+  },
+  "homepage": "https://github.com/highshot-rk/save_site#readme"
+}
